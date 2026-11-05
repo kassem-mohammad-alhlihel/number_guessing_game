@@ -31,7 +31,10 @@ read GUESS
 NUMBER_OF_GUESSES=1
 while [[ $GUESS != $SECRET_NUMBER ]]
 do
-  if [[ $GUESS -gt $SECRET_NUMBER ]]
+  if [[ ! $GUESS =~ ^[0-9]+$ ]]
+  then
+    echo "That is not an integer, guess again:"
+  elif [[ $GUESS -gt $SECRET_NUMBER ]]
   then
     echo "It's lower than that, guess again:"
   else
