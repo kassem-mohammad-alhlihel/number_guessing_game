@@ -22,3 +22,7 @@ then
   INSERT_USER=$($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
   USER_ID=$($PSQL "SELECT user_id FROM users WHERE username='$USERNAME'")
 fi
+
+
+echo "Guess the secret number between 1 and 1000:"
+read GUESS
