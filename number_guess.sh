@@ -40,7 +40,7 @@ do
   else
     echo "It's higher than that, guess again:"
   fi
-  read GUESS
+  read GUESS || exit
   NUMBER_OF_GUESSES=$(( NUMBER_OF_GUESSES + 1 ))
 done
 
